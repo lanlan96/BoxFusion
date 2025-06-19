@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cdae0f30687810ec9aa6b91a2d0a8a9dcba34f7c2955011e700f70f17553371c
-size 3058
+# BoxFusion: Reconstruction-Free Open-Vocabulary 3D Object Detection via Real-Time Multi-View Box Fusion
+
+
+### [Project Page](https://lanlan96.github.io/BoxFusion/) | [Paper](https://arxiv.org/pdf/2506.15610) 
+
+
+## Coming soon (all codes will be released).
+
+
+## Citation
+
+```
+
+```
