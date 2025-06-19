@@ -1,7 +1,6 @@
 index.html filter=lfs diff=lfs merge=lfs -text
 README.md filter=lfs diff=lfs merge=lfs -text
 static filter=lfs diff=lfs merge=lfs -text
-videos/* filter=lfs diff=lfs merge=lfs -text
 static/videos/CA-1M-42899611.webm filter=lfs diff=lfs merge=lfs -text
 static/videos/real-demo-v2.mp4 filter=lfs diff=lfs merge=lfs -text
 static/videos/ScanNet-scene0207.webm filter=lfs diff=lfs merge=lfs -text
