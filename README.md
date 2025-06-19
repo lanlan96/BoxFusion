@@ -7,8 +7,3 @@
 ## Coming soon (all codes will be released).
 
 
-## Citation
-
-```
-
-```
