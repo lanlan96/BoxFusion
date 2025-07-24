@@ -3,8 +3,15 @@
 
 ### [Project Page](https://lanlan96.github.io/BoxFusion/) | [Paper](https://arxiv.org/pdf/2506.15610) 
 
+## 📢 News
+- **2025-07-24**: The codes are under preparation now and will be released before 2025.8.31.
 
-## Coming soon (all codes will be released).
+
+## 📋 TODO
+
+- [ ] Release the codes and demos.
+- [ ] Release the online ROS demo for detecting neighboring objects while the user/agent is scanning.
+      
 
 ## Citation
 ```
