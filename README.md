@@ -4,6 +4,7 @@
 ### [Project Page](https://lanlan96.github.io/BoxFusion/) | [Paper](https://arxiv.org/pdf/2506.15610) 
 
 ## 📢 News
+- **2025-08-10**: BoxFusion is conditionally accepted by Pacific Graphics 2025 (Journal Track).
 - **2025-07-24**: The codes are under preparation now and will be released before 2025.8.31.
 
 
