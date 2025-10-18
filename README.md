@@ -13,7 +13,6 @@ This repository includes the public implementation of BoxFusion.
 ## 📢 News
 - **2025-08-30**: Code is released.
 - **2025-08-10**: BoxFusion is accepted by Pacific Graphics 2025 (Journal Track), the **top 5%** paper.
-- **2025-07-24**: The codes are under preparation now and will be released before 2025.8.31.
 
 
 ## 📋 TODO
