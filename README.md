@@ -132,7 +132,7 @@ python demo.py scannet --model-path ./models/cutr_rgbd.pth  --config ./config/sc
 We recommend to prepare the data like ScanNetV2. Once you have prepared the data, you can instantiate a dataset object in this [file](./cubifyanything/capture_stream.py), and use the similar command to try on your data.
 
 ## 5. ROS2 demo guideline
-We update the basic code for the ROS2 version for BoxFusion. If you use `online` dataset, the dataloader will automatically listen the topic `/rgb/image_raw` for RGB, `/rgb/image_raw` for depth and `/trajectory` for camera pose. You can try any method to obtain the posed RGB-D data, given the raw RGB-D images (We recommend the sparse method [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)).
+We update the basic code for the ROS2 version for BoxFusion. If you use `online` dataset, the dataloader will automatically listen the topic `/rgb/image_raw` for RGB, `/depth/image_raw` for depth and `/trajectory` for camera pose. You can try any method to obtain the posed RGB-D data, given the raw RGB-D images (We recommend the sparse method [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)).
 
 After you have started the node for online pose estimation, you can run the following command to visualize the online detection of BoxFusion.
 
