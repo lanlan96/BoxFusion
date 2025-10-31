@@ -11,7 +11,7 @@ from scipy.spatial.transform import Rotation
 
 from boxfusion.batching import Sensors
 from boxfusion.color import random_color_v2
-from boxfusion.capture_stream import ScannetDataset, CA1MDataset
+from boxfusion.capture_stream import ScannetDataset, CA1MDataset, ROSDataset
 import pickle
 import open_clip
 
@@ -288,7 +288,10 @@ def get_dataset(config):
 
     elif config['dataset'] == 'CA1M':
         dataset = CA1MDataset
-    
+        
+    elif config['dataset'] == 'online':
+        dataset = ROSDataset
+        
     return dataset(config,)
 
 def post_process(boxes, threshold=0.3):

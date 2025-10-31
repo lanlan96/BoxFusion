@@ -11,16 +11,16 @@
 This repository includes the public implementation of BoxFusion.
 
 ## 📢 News
+- **2025-10-31**: Guidelines for ROS2 demo (to be oganized).
 - **2025-08-30**: Code is released.
-- **2025-08-10**: BoxFusion is conditionally accepted by Pacific Graphics 2025 (Journal Track).
-- **2025-07-24**: The codes are under preparation now and will be released before 2025.8.31.
+- **2025-08-10**: BoxFusion is accepted by Pacific Graphics 2025 (Journal Track), the **top 5%** paper.
 
 
 ## 📋 TODO
 
 - [x] Release the codes and demos.
-- [ ] Release the online ROS demo for detecting neighboring objects while the user/agent is scanning.
-- [ ] Release the evaluation code.
+- [x] Release the online ROS demo for detecting neighboring objects while the user/agent is scanning. 
+- [ ] Release the evaluation code (before 11.30).
 
 ## 1. Installation
 
@@ -131,6 +131,15 @@ python demo.py scannet --model-path ./models/cutr_rgbd.pth  --config ./config/sc
 ### Others
 We recommend to prepare the data like ScanNetV2. Once you have prepared the data, you can instantiate a dataset object in this [file](./cubifyanything/capture_stream.py), and use the similar command to try on your data.
 
+## ROS2 demo guideline
+We update the basic code for the ROS2 version for BoxFusion. If you use `online` dataset, the dataloader will automatically listen the topic `/rgb/image_raw` for RGB, `/rgb/image_raw` for depth and camera pose for `/trajectory`. You can try any method to obtain the posed RGB-D data, given the raw RGB-D images (We recommend the sparse method [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)).
+
+After you have started the node for online pose estimation, you can run the following command to visualize the online detection of BoxFusion.
+
+```
+python demo.py online --model-path ./models/cutr_rgbd.pth  --config ./config/online.yaml --device cuda 
+```
+
 ## Acknowledgement
 Parts of the code are modified from [Cubify Anything](https://github.com/apple/ml-cubifyanything). Thanks to the authors and please consider citing their papers.
 
@@ -145,4 +154,3 @@ If you find our work useful in your research, please consider giving a star ✨ 
   year={2025}
 }
 ```
-

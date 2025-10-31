@@ -356,7 +356,7 @@ if __name__ == "__main__":
     dataset_path = args.dataset_path
     use_cache = False
     
-    if dataset_path.lower() in ["scannet", "ca1m"]:
+    if dataset_path.lower() in ["scannet", "ca1m", 'online']:
         if not os.path.exists(args.config):
             raise ValueError("Missing config path")
         else:
