@@ -11,6 +11,7 @@
 This repository includes the public implementation of BoxFusion.
 
 ## 📢 News
+- **2025-12-23**: Evaluation code is released.
 - **2025-10-31**: Guidelines for ROS2 demo (to be oganized).
 - **2025-08-30**: Code is released.
 - **2025-08-10**: BoxFusion is accepted by Pacific Graphics 2025 (Journal Track), the **top 5%** paper.
@@ -20,7 +21,7 @@ This repository includes the public implementation of BoxFusion.
 
 - [x] Release the codes and demos.
 - [x] Release the online ROS demo for detecting neighboring objects while the user/agent is scanning. 
-- [ ] Release the evaluation code (before 11.30).
+- [x] Release the evaluation code
 
 ## 1. Installation
 
@@ -140,6 +141,28 @@ After you have started the node for online pose estimation, you can run the foll
 python demo.py online --model-path ./models/cutr_rgbd.pth  --config ./config/online.yaml --device cuda 
 ```
 
+## 6. Evaluation
+
+### Preparation
+1.please prepare the full datasets including 107 sequences for CA-1M and 100 sequences for ScanNetV2 as mentioned above. The important files for GT boxes is `after_filter_boxes.npy` for CA-1M and `scannet_train_detection_data` for ScanNetV2. 
+
+2.Please follow the instructions to prepare CA-1M. 
+
+3.For ScanNetV2, you can follow the intructions in `./evaluation/data_util/README.md`, or just download the preprocessed data in [google drive](https://drive.google.com/file/d/1tOwA64oSFDDUNfSVaAREukyDz0yrkDDf/view?usp=sharing).Please move the `scannet_train_detection_data` directory to `./evaluation/data_util/`.
+
+### Run
+Please use the commands in Section 4 to run the full sequences. In the paper, we run all the 107 validation scenes in CA-1M and uniformly select 100 scenes (see `./evaluation/data_util/meta_data/scannetv2_val.txt`). Please sepecify the `--data_path` to your processed root. Use the following command as an example to run the evaluation.
+```
+cd evaluation
+```
+#### CA-1M
+```
+python eval_ca1m.py --dataset ca1m --data_path /media/lyq/temp/dataset/CA-1M-slam/ --dump_dir eval_ca1m --cluster_sampling seed_fps --use_3d_nms --use_cls_nms --per_class_proposal --gpu 0 --pred_root /home/lyq/myprojects/boxfusion/results/full/
+```
+#### ScanNetV2
+```
+python eval_scannet.py --dataset scannet --data_path /media/lyq/mydata/Dataset/ScanNet/ --dump_dir eval_scannet --num_point 40000 --cluster_sampling seed_fps --use_3d_nms --use_cls_nms --per_class_proposal --gpu 0 --pred_root /home/lyq/myprojects/boxfusion/results/scannet/
+```
 ## Acknowledgement
 Parts of the code are modified from [Cubify Anything](https://github.com/apple/ml-cubifyanything). Thanks to the authors and please consider citing their papers.
 
