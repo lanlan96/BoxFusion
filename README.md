@@ -3,6 +3,9 @@
 
 
 <a href="https://arxiv.org/pdf/2506.15610"><img src="https://img.shields.io/badge/arXiv-2506.15610-b31b1b" alt="arXiv"></a>
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70254" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Paper-VGGT" alt="Paper PDF">
+</a>
 <a href="https://lanlan96.github.io/BoxFusion/"><img src="https://img.shields.io/badge/Project_Page-green" alt="Project Page"></a>
 
 [Yuqing Lan](https://scholar.google.com/citations?user=laTrw7AAAAAJ&hl=en&oi=ao), [Chenyang Zhu](https://www.zhuchenyang.net/), [Zhirui Gao](https://scholar.google.com/citations?hl=en&user=IqtwGzYAAAAJ), [Jiazhao Zhang](https://jzhzhang.github.io/), [Yihan Cao](https://github.com/yhanCao), [Renjiao Yi](https://renjiaoyi.github.io/), [Yijie Wang](https://ieeexplore.ieee.org/author/37540196000), [Kai Xu](https://kevinkaixu.net/)
@@ -170,10 +173,14 @@ Parts of the code are modified from [Cubify Anything](https://github.com/apple/m
 ## Citation
 If you find our work useful in your research, please consider giving a star ✨ and citing the following paper:
 ```
-@article{lan2025boxfusion,
+@inproceedings{lan2025boxfusion,
   title={BoxFusion: Reconstruction-Free Open-Vocabulary 3D Object Detection via Real-Time Multi-View Box Fusion},
   author={Lan, Yuqing and Zhu, Chenyang and Gao, Zhirui and Zhang, Jiazhao and Cao, Yihan and Yi, Renjiao and Wang, Yijie and Xu, Kai},
-  journal={arXiv preprint arXiv:2506.15610},
-  year={2025}
+  booktitle={Computer Graphics Forum},
+  volume={44},
+  number={7},
+  pages={e70254},
+  year={2025},
+  organization={Wiley Online Library}
 }
 ```
