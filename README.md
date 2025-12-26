@@ -166,8 +166,17 @@ python eval_ca1m.py --dataset ca1m --data_path /media/lyq/temp/dataset/CA-1M-sla
 ```
 python eval_scannet.py --dataset scannet --data_path /media/lyq/mydata/Dataset/ScanNet/ --dump_dir eval_scannet --num_point 40000 --cluster_sampling seed_fps --use_3d_nms --use_cls_nms --per_class_proposal --gpu 0 --pred_root /home/lyq/myprojects/boxfusion/results/scannet/
 ```
+
+### Discussion for other methods
+1. For the compared methods in this paper (e.g., FCAF3D and SpatialLM), you need to rotate the input point cloud to be axis-aligned. Please refer to the [repository](https://github.com/zhirui-gao/awesome_3DV_skills/tree/main/pointcloud) of our co-author.
+2. For the online methods (e.g., EmbodiedSAM and OnlineAnySeg), you need to transform the segmented pointclouds to OBBs and perform the evaluation similarly. The [reference code](https://github.com/zhirui-gao/awesome_3DV_skills/tree/main/pointcloud/OBB_AABB) is here.
+3. As the paper is submitted in early June, we report results of the 1.0 version of SpatialLM. The 1.1 version is better and we welcome if anyone can provide the newest results.
+
+Thanks the co-author, please consider citing their github repository if you find it useful.
+
 ## Acknowledgement
 Parts of the code are modified from [Cubify Anything](https://github.com/apple/ml-cubifyanything). Thanks to the authors and please consider citing their papers.
+
 
 
 ## Citation
