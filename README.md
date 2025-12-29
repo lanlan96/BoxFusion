@@ -154,7 +154,7 @@ python demo.py online --model-path ./models/cutr_rgbd.pth  --config ./config/onl
 3.For ScanNetV2, you can follow the intructions in `./evaluation/data_util/README.md`, or just download the preprocessed data in [google drive](https://drive.google.com/file/d/1tOwA64oSFDDUNfSVaAREukyDz0yrkDDf/view?usp=sharing).Please move the `scannet_train_detection_data` directory to `./evaluation/data_util/`.
 
 ### Run
-Please use the commands in Section 4 to run the full sequences. In the paper, we run all the 107 validation scenes in CA-1M and uniformly select 100 scenes (see `./evaluation/data_util/meta_data/scannetv2_val.txt`). Please sepecify the `--data_path` to your processed root. Use the following command as an example to run the evaluation.
+Please use the commands in Section 4 to run the full sequences. In the paper, we run all the 107 validation scenes in CA-1M and uniformly select 100 scenes (see `./evaluation/data_util/meta_data/scannetv2_val.txt`) in ScanNetV2. Please sepecify the `--data_path` to your processed root. Use the following command as an example to run the evaluation.
 ```
 cd evaluation
 ```
