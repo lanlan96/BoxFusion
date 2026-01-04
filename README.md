@@ -149,9 +149,9 @@ python demo.py online --model-path ./models/cutr_rgbd.pth  --config ./config/onl
 ### Preparation
 1.please prepare the full datasets including 107 sequences for CA-1M and 100 sequences for ScanNetV2 as mentioned above. The important files for GT boxes is `after_filter_boxes.npy` for CA-1M and `scannet_train_detection_data` for ScanNetV2. 
 
-2.Please follow the instructions to prepare CA-1M. 
+2.Please follow the instructions to prepare CA-1M. We also provide the processed datasets of CA-1M validation sets in the format similar to ScanNet. Check this at [huggingface](https://huggingface.co/datasets/Kevin1804/BoxFusion/tree/main). It is recommended to download the preprocessed sequences.
 
-3.For ScanNetV2, you can follow the intructions in `./evaluation/data_util/README.md`, or just download the preprocessed data in [google drive](https://drive.google.com/file/d/1tOwA64oSFDDUNfSVaAREukyDz0yrkDDf/view?usp=sharing).Please move the `scannet_train_detection_data` directory to `./evaluation/data_util/`.
+3.For ScanNetV2, you can follow the intructions in `./evaluation/data_util/README.md`, or just download the preprocessed GT data in [google drive](https://drive.google.com/file/d/1tOwA64oSFDDUNfSVaAREukyDz0yrkDDf/view?usp=sharing). Please move the `scannet_train_detection_data` directory to `./evaluation/data_util/`.
 
 ### Run
 Please use the commands in Section 4 to run the full sequences. In the paper, we run all the 107 validation scenes in CA-1M and uniformly select 100 scenes (see `./evaluation/data_util/meta_data/scannetv2_val.txt`) in ScanNetV2. Please sepecify the `--data_path` to your processed root. Use the following command as an example to run the evaluation.
