@@ -329,7 +329,7 @@ def run(cfg, model, dataset, clip_model, preprocess, tokenized_text, text_featur
                     boxes_3d = post_process(boxes_3d)
                     
                 if boxes_3d.shape[0]>0:
-                    save_list = [[(int(0), (boxes_3d[n]), 1.0) for n in range(len(all_pred_box))]] # list of tuples class_idx[n]
+                    save_list = [[(int(0), (boxes_3d[n]), 1.0) for n in range(boxes_3d.shape[0])]] # list of tuples class_idx[n]
 
                     save_box(save_list, os.path.join(cfg['data']['output_dir'], video_id[0]+"_boxes.pkl"))
                     
